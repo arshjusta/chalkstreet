@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<div class="cel">
+
+Celsius <br>
+<input type="number" name="celsius" id="c" placeholder="Enter the celsius to be converted" onkeyup="convert('C')" >
+<br>
+Fahrenheit <br>
+
+<input onkeyup="convert('F')" type="number" name="fahrenheit" value="" id="f" >
+</div>
+
+<script>
+function convert(degree) {
+  var x;
+  if (degree == "C")
+   {
+    x = document.getElementById("c").value * 9 / 5 + 32;
+    document.getElementById("f").value = Math.round(x);
+  }
+  else
+  {
+    x = (document.getElementById("f").value -32) * 5 / 9;
+    document.getElementById("c").value = Math.round(x);
+  }
+}
+</script>
+  </body>
+</html>
